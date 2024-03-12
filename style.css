@@ -1,0 +1,675 @@
+@font-face {
+  font-family: Garet;
+  src: url(FONT/Garet-Book.ttf);
+}
+
+@font-face {
+  font-family: Telegraf;
+  src: url(FONT/PPTelegraf-Regular.otf);
+}
+
+
+/*
+-----------------------------------
+---------------COMMON------------
+-----------------------------------
+*/
+
+
+body{
+  padding: 0;
+  margin: 0;
+  min-height: 100vh; /* Altezza minima della viewport */
+  position: relative; /* Posizione relativa per i figli assoluti */
+
+}
+.footer {
+position: absolute; /* Posizione assoluta */
+bottom: 0; /* In fondo alla pagina */
+width: 100%; /* Occupa l'intera larghezza */
+padding-bottom: 50px;
+text-align: center;
+font-family: Garet;
+}
+
+/*LOGO*/
+.logo{
+display: inline-block; 
+padding-left:7%;
+height: 30px;
+width: 400px;
+}
+
+.logo img{
+padding-top: 5px;
+width: 25px;
+height: 25px;
+}
+
+.logo p{
+display: inline;
+vertical-align:top;
+font-family: Garet;
+color: #212423;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #212423; 
+  overflow: hidden;
+  font-family: 'Garet', sans-serif;
+  transition: background-color 0.3s ease-in-out; /* Transizione per il cambio di colore di sfondo */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2; 
+  text-align: center;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transizione per il cambio di colore e sfondo */
+}
+
+.topnav a:hover {
+  background-color: #72538b; 
+  color: #f2f2f2; 
+}
+
+.topnav a.active {
+  color: #72538b; 
+  
+}
+.topnav a.active:hover {
+  color: #f2f2f2; 
+}
+
+.topnav a.login {
+  float: right;
+  color: #f2f2f2;
+  transition: color 0.3s ease-in-out; /* Transizione per il cambio di colore */
+}
+
+.topnav a.login:hover {
+  color: #f2f2f2; 
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.topnav p {
+  float: right;
+  color: #f2f2f2; 
+  padding-right: 30px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  transition: color 0.3s ease-in-out; /* Transizione per il cambio di colore */
+}
+
+.topnav p a {
+  padding-top: 30px;
+  margin-top: -30px;
+  color: #f2f2f2;
+  
+}
+
+.topnav p a:hover {
+  color: #f2f2f2;  
+}
+
+
+
+
+/*
+-----------------------------------
+---------------FRONTPAGE-----------
+-----------------------------------
+*/
+
+
+.front {
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+text-align: center;
+}
+
+.front table {
+width: 100%;
+border-collapse: collapse;
+margin-left: 7%;
+}
+
+
+.front table td p:first-child {
+padding-top: 0px;
+font-size: 100px;
+height: 100px;
+font-weight: bold;
+padding-bottom: 30px; /* Aggiunto padding-bottom di 30px per spaziare dal secondo paragrafo */
+color: #72538b; 
+}
+
+.front table td{
+  border: none;
+}
+
+.front table td:nth-child(2) {
+text-align: center;
+vertical-align: middle;
+}
+
+.front table tr td button{
+background-color: #515755;
+border: 10px solid #212423;
+border-radius: 30px;
+margin-top: 30px;
+width: 500px;
+height: 500px;
+
+}
+
+.front table td img {
+display: block;
+margin: 0 auto;
+height: 450px;
+height: auto;
+}
+
+.front table td p {
+padding-top: 20px;
+height: 40px;
+text-align: left;
+font-family: Telegraf;
+font-size: 25px;
+padding-bottom: 30px; /* Aggiunto padding-bottom di 30px per spaziare i paragrafi */
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 733px;
+  height: 630px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.caption {
+  color:#72538b;
+  font-size: 20px;
+  
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: Telegraf;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Gradazione sbiadimento*/
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*BOTTOM PAGE*/
+.bottom{
+padding-left: 7%;
+height: 50px;
+align-items: center;
+font-weight: bold;
+display: flex;
+}
+
+.bottom p{
+font-family: Garet;
+font-size: 20px;
+margin-right: 20px;
+}
+
+.bottom img{
+width: 40px;
+height: 40px;
+margin-right: 20px;
+}
+
+
+/*
+-----------------------------------
+---------------SHOP----------------
+-----------------------------------
+*/
+
+/*BTN CARRELLO*/
+.precarrello{
+width: 100;
+text-align: right;
+float: right;
+padding-right: 40px;
+}
+.precarrello button{
+width: 100px;
+height: 100px;
+border: none;
+padding: 0;
+position: relative;
+background-color:transparent;
+}
+
+.precarrello img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.topalign{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+/*FRONT SHOP*/
+.frontshop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7%;
+}
+
+.frontshop table {
+  width: 80%;
+  height: 600px;
+  border-collapse: collapse; /* Rimuove i bordi tra le celle della tabella */
+}
+
+.frontshop table tr td {
+  width: 28%;
+  text-align: center;
+  border: none; /* Rimuove i bordi delle celle della tabella */
+}
+
+.frontshop table tr td:nth-child(2) {
+  width: 44%;
+}
+
+.frontshop table tr td:nth-child(2) button:first-of-type {
+  height: 500px;
+  width: 300px;
+}
+
+
+.frontshop table tr td button:first-of-type{
+height: 350px;
+width: 200px;
+background-color: #72538b;
+border: 10px solid #212423;
+z-index: 1; /* Assicura che il bottone sia sopra l'effetto lucina */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiunge una transizione al cambio di dimensioni e ombra */
+margin-bottom: 20px;
+}
+
+.frontshop table tr td button:first-of-type:hover {
+transform: scale(1.1); /* Ingrandisce il bottone quando ci passi sopra col cursore */
+box-shadow: 0 0 800px rgba(114, 83, 139, 0.7); /* Aggiunge un'ombra leggera durante il passaggio del cursore */
+}
+
+.frontshop table tr td button:first-of-type img{ 
+height: 95%;
+width: 95%;
+object-fit: cover;
+transition: opacity 3s ease;
+}
+
+.frontshop table tr td button:first-of-type:hover img{
+  opacity: 0;
+}
+
+.frontshop table tr td button:first-of-type:hover img.new-image{
+  opacity: 1;
+}
+
+/*BOTTONI SHOP*/
+.frontshop table tr td button:nth-of-type(2) {
+  margin-top: 20px;
+  width: 150px;
+  height: 70px;
+  padding: 20px;
+  border: solid 4px #212423;
+  position: relative;
+  display: inline-block;
+  transition: border-color 0.7s ease, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Dichiarato tutto in un'unica transizione */
+  background-color: #212423;
+  color: #f2f2f2; /* Colore del testo iniziale */
+}
+
+.frontshop table tr td button:nth-of-type(2):hover {
+  background-color: #72538b;
+  color: #212423;
+  border-color: #72538b; /* Cambia il colore del bordo al passaggio del mouse */
+}
+
+
+.frontshop table tr td button:nth-of-type(2) span{
+position: absolute;
+font-weight: bold;
+top: 50%;
+transform: translateY(-50%);
+font-family: Garet;
+color: #f2f2f2;  
+}
+
+.frontshop table tr td button:nth-of-type(2) span:first-of-type{
+left: 10px;
+}
+
+.frontshop table tr td button:nth-of-type(2) span:nth-of-type(2){
+right: 10px;
+}
+
+.frontshop table tr td p{
+  font-family: Garet;
+  font-weight: bold;
+}
+
+
+/*
+-----------------------------------
+---------------INFORMAZIONI--------
+-----------------------------------
+*/
+
+.frontinfo {
+text-align: center;
+}
+
+.frontinfo h1{
+font-size: 100px;
+font-family: Telegraf;
+color: #72538b;
+}
+
+.frontinfo h3{
+font-size: 25px;
+font-family: Garet;
+font-weight: bold;
+padding-left: 6%;
+padding-right: 6%;
+}
+
+
+.frontinfo p{
+font-size: 18px;
+font-family: Telegraf;
+padding: 10px;
+margin: 0;
+}
+
+
+
+/*
+-----------------------------------
+---------------LOGIN---------------
+----------REGISTRAZIONE------------
+-----------------------------------
+*/
+
+/*LOGIN CENTRATO*/
+.CentroLogin{
+  text-align: center;
+  font-family: Garet;
+  font-size: 14pt;
+  color: #515755;
+}
+  
+.CentroLogin input{
+  text-align: center;
+  border: 3px solid #212423;
+  border-radius: 0;
+  transition: border-color 0.3s ease-in-out;
+  /* Rimuove il bordino predefinito */
+  outline: none;
+  width: 300px; /* Modifica la larghezza*/
+  height: 40px; /* Modifica l'altezza*/
+  /*text-transform: uppercase; /*Testo solo in maiuscolo!*/
+  font-weight:bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Garet;
+}
+  
+  
+.CentroLogin input:focus {
+border-radius: 0;
+border: 3px solid #72538b;
+transition: border 0.3s ease-in-out;
+}
+
+.CentroLogin button{
+  text-align: center;
+  border: 3px solid #212423;
+  background-color: transparent;
+  /* Rimuove il bordino predefinito */
+  outline: none;
+  width: 150px; /* Modifica la larghezza*/
+  height: 40px; /* Modifica l'altezza*/
+  text-transform: uppercase; /*Testo solo in maiuscolo!*/
+  font-weight:bold;
+  margin: 20px;
+  font-family: Garet;
+  transition: border-color 0.7s ease, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Dichiarato tutto in un'unica transizione */
+  background-color: #212423;
+  color: #f2f2f2;
+}
+
+.CentroLogin button:hover {
+  background-color: #72538b;
+  border-color: #72538b;
+}
+.CentroLogin h1{
+  font-family: Garet;
+  font-size: 70px;
+  color:#212423;
+}
+.CentroLogin img{
+  width: 200px;
+  height: 200px;
+}
+
+/*
+-----------------------------------
+---------------CARRELLO------------
+-----------------------------------
+*/
+
+.carrello{
+  text-align: center;
+}
+.carrello table{
+border-collapse: collapse;
+width: 50%;
+margin: 0 auto; /* Centra la tabella nella pagina */
+font-family: Garet;
+}
+
+.carrello table tr th, td {
+border: 2px solid black;
+padding: 8px;
+text-align: left;
+}
+
+.carrello table tr th {
+background-color: #72538b;
+color:#f2f2f2; /* Colore di sfondo per le celle dell'intestazione */
+}
+
+.carrello button{
+  text-align: center;
+  border: 3px solid #212423;
+  background-color: transparent;
+  /* Rimuove il bordino predefinito */
+  outline: none;
+  width: 200px; /* Modifica la larghezza*/
+  height: 80px; /* Modifica l'altezza*/
+  text-transform: uppercase; /*Testo solo in maiuscolo!*/
+  font-weight:bold;
+  margin: 20px;
+  font-family: Garet;
+  transition: border-color 0.7s ease, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Dichiarato tutto in un'unica transizione */
+  background-color: #212423;
+  color: #f2f2f2;
+}
+
+.carrello button:hover{
+  background-color: #72538b;
+  border-color: #72538b;
+}
+
+.carrello img{
+  width: 200px;
+  height: 200px;
+}
+.carrello h1 {
+    font-family: Garet;
+    font-size: 70px;
+    color: #212423;
+    margin: 0; /* Rimuove il margine predefinito dal titolo */
+}
+
+
+/*
+-----------------------------------
+---------GESTIONE LINEE------------
+-----------------------------------
+*/
+
+.toplinea{
+  display: inline-block; 
+  height: 40px;
+  width: 400px;
+}
+
+.toplinea img{
+  width: 40px;
+  height: 40px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.toplinea h1{
+  display: inline;
+  vertical-align:top;
+  font-family: Telegraf;
+  font-size: 30pt;
+  color: #72538b;
+}
+.modificalinea {
+  text-align: center;
+  font-family: Garet;
+  font-size: 14pt;
+  color: #515755;
+  
+}
+
+.modificalinea table {
+  margin: 0 auto; /* Centra la tabella orizzontalmente */
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.modificalinea table tr td {
+  border: none;
+}
+
+.modificalinea table tr td label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modificalinea table tr td input {
+  text-align: center;
+  border: 3px solid #212423;
+  border-radius: 0;
+  transition: border-color 0.3s ease-in-out;
+  outline: none;
+  width: 300px;
+  height: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: Garet;
+}
+
+.modificalinea table tr td input:focus {
+  border-radius: 0;
+  border: 3px solid #72538b;
+  transition: border 0.3s ease-in-out;
+}
+
+.modificalinea table tr td input[type="number"] {
+  width: 60px; /* Modifica la larghezza specifica per gli input di tipo numero */
+}
+
+.modificalinea input[type="submit"] {
+  text-align: center;
+  border: 3px solid #212423;
+  background-color: transparent;
+  transition: border-color 0.7s ease, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  outline: none;
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 20px;
+  font-family: Garet;
+  background-color: #212423;
+  color: #f2f2f2;
+}
+
+.modificalinea input[type="submit"]:hover {
+  background-color: #72538b;
+  border-color: #72538b;
+}
+
+/*
+-----------------------------------
+-------CONFERMA PAGAMENTO----------
+-----------------------------------
+*/
+
+.conferma{
+  width: 100%;
+  text-align: center;
+}
+
+.conferma h1{
+  font-family: Telegraf;
+  font-size: 60pt;
+  color: #72538b;
+}
+
+.conferma p{
+  font-family: Telegraf;
+  font-size: 25pt;
+  color:#212423;
+}
